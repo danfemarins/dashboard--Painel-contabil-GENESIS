@@ -1,0 +1,83 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Cor de fundo suave */
+}
+
+header {
+    background-color: #343a40; /* Cinza escuro */
+    color: white;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 40px; /* Ajuste conforme necessário */
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #28a745; /* Verde escuro no hover */
+}
+
+#hero {
+    background-color: #FFA500; /* laranja */
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+#features {
+    background-color: #f8f9fa; /* Cinza claro */
+    padding: 50px 0;
+    text-align: center;
+}
+
+.feature {
+    margin-bottom: 30px;
+}
+
+#pricing {
+    background-color: #FFA500; /* laranja*/
+    color: white;
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+footer {
+    background-color: #343a40; /* Cinza escuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
