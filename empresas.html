@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planilha de gerenciamento de crédito e débito</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Referência ao FontAwesome -->
+    <link rel="stylesheet" type="text/css" href="css/custo - Client.css">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Planilha de gerenciamento de crédito e débito</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="entry-container">
+                <h2>Relatório de Entradas</h2>
+                <div id="relatorio">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dados">
+                        </tbody>
+                    </table>
+                    <p id="total-entrada">Total Entrada: R$0.00</p>
+                    <a href="#" onclick="exportarDados('entrada')" class="export-link">Exportar Relatório de Entradas</a>
+                </div>
+            </div>
+
+            <div class="expense-container">
+                <h2>Relatório de Saídas</h2>
+                <div id="relatorio-saida">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dados-saida">
+                        </tbody>
+                    </table>
+                    <p id="total-saida">Total Saída: R$0.00</p>
+                    <a href="#" onclick="exportarDados('saida')" class="export-link">Exportar Relatório de Saídas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de atualização manual -->
+    <button onclick="atualizarManualmente()" class="refresh-button"><i class="fas fa-sync-alt"></i></button>
+
+    <!-- Link to the JavaScript file -->
+    <script type="text/javascript" src="js/custo - Client.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Planilha de gerenciamento de crédito e débito</title>
+    <link rel="stylesheet" type="text/css" href="css/custo.css">
+	<link rel="icon" type="image/png" href="assets/favicon.png">
+</head>
+<body>
+    <div class="container">
+        <h1>Planilha de gerenciamento de crédito e débito</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="entry-container">
+                <h2>Adicionar Valores de Entrada</h2>
+                <form id="entrada-form">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" id="descricao" required><br>
+                    
+                    <label for="valor">Valor:</label>
+                    <input type="number" id="valor" required><br>
+                    
+                    <button type="button" onclick="adicionarEntrada()">Adicionar</button>
+                </form>
+            </div>
+
+            <div class="expense-container">
+                <h2>Adicionar Valores de Saída</h2>
+                <form id="saida-form">
+                    <label for="descricao-saida">Descrição:</label>
+                    <input type="text" id="descricao-saida" required><br>
+                    
+                    <label for="valor-saida">Valor:</label>
+                    <input type="number" id="valor-saida" required><br>
+                    
+                    <button type="button" onclick="adicionarSaida()">Adicionar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="entry-container">
+                <h2>Relatório de Entradas</h2>
+                <div id="relatorio">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th>Ação</th> <!-- Coluna de ação (remover entrada) -->
+                            </tr>
+                        </thead>
+                        <tbody id="dados">
+                        </tbody>
+                    </table>
+                    <p id="total-entrada">Total Entrada: R$0.00</p>
+                    <a href="#" onclick="exportarDados('entrada')" class="export-link">Exportar Relatório de Entradas</a>
+                </div>
+            </div>
+
+            <div class="expense-container">
+                <h2>Relatório de Saídas</h2>
+                <div id="relatorio-saida">
+                    <table border="1">
+                        <thead>
+                            <tr>
+                                <th>Data</th>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th>Ação</th> <!-- Coluna de ação (remover saída) -->
+                            </tr>
+                        </thead>
+                        <tbody id="dados-saida">
+                        </tbody>
+                    </table>
+                    <p id="total-saida">Total Saída: R$0.00</p>
+                    <a href="#" onclick="exportarDados('saida')" class="export-link">Exportar Relatório de Saídas</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- Link to the JavaScript file -->
+     <script type="text/javascript" src="js/custo.js"></script>
+</body>
+</html>
